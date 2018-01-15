@@ -33,6 +33,7 @@
 	max-width: calc(100% - 130px);
 	text-overflow: ellipsis;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 .room__clear {
 	display: none;

@@ -10,8 +10,8 @@ var gulp = require('gulp'),
 
 var params = {
   out: 'public',
-  htmlSrc: 'touch.main.html',
-  levels: ['touch.blocks'] // Уровни переопределения, например ['touch.blocks', 'descktop.blocks']
+  htmlSrc: 'touch.change-meeting.html',
+  levels: ['touch.blocks', 'desktop.blocks'] // Уровни переопределения, например ['touch.blocks', 'desktop.blocks']
 },
   getFileNames = require('html2bl').getFileNames(params);
 
