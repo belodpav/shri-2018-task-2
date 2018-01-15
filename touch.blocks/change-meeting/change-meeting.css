@@ -1,0 +1,28 @@
+.change-meeting {
+
+}
+.change-meeting__editor {
+	margin: 0 auto;
+	margin-top: 24px;
+}
+
+.change-meeting__submit-bar {
+	width: 100%;
+	padding: 0 16px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 80px;
+	border-top: 1px solid #E9ECEF;
+	background-color: #fff;
+}
+.change-meeting__button {
+	margin-right: 16px;
+}
+.change-meeting__footer {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}

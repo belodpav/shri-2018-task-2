@@ -1,0 +1,14 @@
+.logo { 
+	display: inline-block;
+	width: 150px;
+	height: 22px;
+	background-image: url('logo.svg');
+	text-decoration: none;
+}
+.logo__text {
+	display: block;
+	width: 100%;
+	text-indent: 110%;
+	white-space: nowrap;
+	overflow: hidden;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+ 
+		html {
+			min-height: 100%;
+		}
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+		*,
+		*:after,
+		*:before {
+		  border: 0;
+		  margin: 0;
+		  outline: 0;
+		  padding: 0;
+		  border-radius: 0;
+		  box-sizing: border-box;
+		}
+
+		body {
+		  color: #000;
+		  font-size: 13px;
+		  font-family: Neue Helvetica, Open Sans, Helvetica, Arial, sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<header class="site__header header">
+		<a href="" class="logo" target="_top">
+			<span class="logo__text">Яндекс Переговорки</span>
+		</a>
+	</header>
+
+	<div class="change-meeting">
+		<div class="change-meeting__editor editor">
+			<div class="editor__header">
+				<div class="editor__title">
+					Редактирование встречи
+				</div>
+				<button class="editor__header-close circle-button circle-button_size_md circle-button_theme_normal">
+					<span class="circle-button__icon icon icon_type_close"></span>
+				</button>
+			</div>
+			<div class="editor__body">
+				<div class="editor__grid">
+				<div class="editor__item">
+					<label class="editor__label" for="">Тема</label>
+					<div class="input input_size_md input_theme_normal input_actions_true">
+						<input type="text" class="input__control" placeholder="О чем будем говорить?" value="Рассуждения о высоком">
+						<span class="input__clear icon icon_type_close"></span>
+					</div>
+				</div>				
+				<div class="editor__row editor__item editor__item_space_bottom">
+					<div class="editor__item-date">
+						<label class="editor__label" for="">Дата и время</label>
+						<div class="input input_size_md input_theme_normal input_actions_true">
+							<input type="text" class="input__control" value="14 декабря, 2017">
+							<span class="input__chose-date icon icon_type_calendar">
+						</div>
+					</div>
+					<div class="editor__item-time editor__item_touch_no-label">
+						<label class="editor__label" for="">Начало</label>
+						<div class="input input_size_md input_theme_normal">
+							<input type="text" class="input__control" value="16:00">
+						</div>
+					</div>
+					<div class="editor__item_touch_no-label">
+						<label class="editor__label" for="">&nbsp;</label>
+						<div class="editor__item-time-dash">&mdash;</div>
+					</div>
+					<div class="editor__item-time editor__item_touch_no-label">
+						<label class="editor__label" for="">Конец</label>
+						<div class="input input_size_md input_theme_normal">
+							<input type="text" class="input__control" value="16:30">
+						</div>
+					</div>
+				</div>
+				<div class="editor__item editor__item_space_bottom">
+					<label class="editor__label" for="">Участники</label>
+					<div class="input input_size_md input_theme_normal input_actions_true">
+						<input type="text" class="input__control" placeholder="Например, Тор Одинович">
+					</div>
+					<div class="editor__persons-box editor__item_touch_space-line">
+						<div class="editor__person">
+							<div class="person">
+								<div class="person__avatar">
+									<img class="person__avatar-img" src="images/person__avatar-00.jpg">
+								</div>
+								<div class="person__name">
+									Лекс Лютер
+								</div>
+							</div>
+							<span class="editor__person-clear icon icon_type_close"></span>
+						</div>
+						<div class="editor__person">
+							<div class="person">
+								<div class="person__avatar">
+									<img class="person__avatar-img" src="images/person__avatar-01.jpg">
+								</div>
+								<div class="person__name">
+									Настя Скворцова
+								</div>
+							</div>
+							<span class="editor__person-clear icon icon_type_close"></span>
+						</div>
+						<div class="editor__person ">
+							<div class="person">
+								<div class="person__avatar">
+									<img class="person__avatar-img" src="images/person__avatar-02.jpg">
+								</div>
+								<div class="person__name">
+									Том Андерсон
+								</div>
+							</div>
+							<span class="editor__person-clear icon icon_type_close"></span>
+						</div>
+					</div>
+				</div>
+				<div class="editor__item editor__item_space_bottom">
+					<label class="editor__label" for="">Рекомендованные переговорки</label>
+					<div class="editor__rooms-box">
+						<div class="editor__room room room_state_current">
+							<div class="room__time-range">16:00&mdash;16:30</div>
+							<div class="room__name">Поле непаханное · 4 этаж</div>
+							<span class="room__clear room__clear_visible icon icon_type_close-white"></span>
+						</div>
+					</div>
+				</div>
+				<div class="editor__item editor__item_touch_visible editor__item_space_bottom">
+					<div class="editor__item-delete">
+						Удалить встречу
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="change-meeting__submit-bar">
+			<button class="change-meeting__button button button_theme_normal button_size_md">Отмена</button>
+			<button class="button button_theme_active button_size_md">Сохранить</button>
+		</div>
+		<div class="change-meeting__footer submit-bar">
+			<button class="submit-bar__button button button_theme_normal button_size_md">Отмена</button>
+			<button class="submit-bar__button button button_theme_normal button_size_md">Удалить встречу</button>
+			<button class="submit-bar__button button button_theme_normal button_size_md">Сохранить</button>
+
+		</div>
+	</div>
+
+	
+
+
+<div style="display:none" class="modal">
+	<div class="modal__window">
+		<span class="modal__icon icon icon_type_girl-close"></span>
+		<div class="modal__text">Встреча будет удалена безвозвратно</div>
+		<div class="modal__buttons">
+			<button class="modal__button button button_theme_normal button_size_md">Отмена</button>
+			<button class="modal__button button button_theme_normal button_size_md">Удалить</button>
+		</div>
+	</div>
+</div>
+
+	<div style="display:none" class="modal">
+		<div class="modal__window">
+			<span class="modal__icon icon icon_type_party"></span>
+			<div class="modal__text">Встреча создана!</div>
+			<div class="modal__date">14 декабря, 15:00—17:00</div>
+			<div class="modal__place">Готем&nbsp;&middot;&nbsp;4 этаж</div>
+			<div class="modal__buttons">
+				<button class="modal__button button button_theme_active button_size_md">Хорошо</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

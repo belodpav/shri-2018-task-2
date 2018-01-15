@@ -1,0 +1,19 @@
+.timegrid__offset-left { 
+	width: 2.1256038647342%;
+	min-width: 22px;
+}
+.timegrid__offset-right {
+	width: 2.1256038647342%;
+	min-width: 22px;
+}
+.timegrid__body {
+	width: 95.6521739130%;
+}
+.timegrid__column {
+	min-width: 66px;
+	width: 6.6666666666666%;
+}
+.timegrid__current-time {
+	top: 0;
+	transform: translate(-50%, 50%);
+}

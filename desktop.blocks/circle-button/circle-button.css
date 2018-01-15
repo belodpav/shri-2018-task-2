@@ -1,0 +1,18 @@
+.circle-button_size_lg,
+.circle-button_size_md {
+	height: 24px;
+	width: 24px;
+}
+.circle-button__icon {
+	width: 22px;
+	height: 22px;
+}
+.circle-button_theme_normal {
+	background-color:  #e9ecef;
+}
+.circle-button_theme_normal .circle-button__icon {
+	opacity: .43;
+}
+.circle-button_theme_normal:hover .circle-button__icon {
+	opacity: 1;
+}

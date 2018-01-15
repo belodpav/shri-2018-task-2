@@ -1,0 +1,29 @@
+.tooltip { 
+	height: 113px;
+	width: 338px;
+}
+.tooltip__edit {
+	top: 8px;
+	right: 8px;
+}
+.tooltip__title {
+	font-size: 15px;
+	line-height: 24px;
+}
+.tooltip__info {
+	margin: 0 0 16px;
+	font-size: 13px;
+	line-height: 17px;
+}
+.tooltip__date{
+}
+.tooltip__time-range {
+}
+.tooltip__room {
+}
+.tooltip__person {
+}
+.tooltip__people-count {
+	font-size: 13px;
+	line-height: 17px;
+}

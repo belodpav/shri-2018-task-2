@@ -1,0 +1,40 @@
+.icon { 
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.icon_type_close {
+	background-image: url('icon_type_close.svg');
+}
+.icon_type_close-white {
+	background-image: url('icon_type_close-white.svg');
+}
+.icon_type_edit {
+	background-image: url('icon_type_edit.svg');
+}
+.icon_type_calendar {
+	background-image: url('icon_type_calendar.svg');
+}
+.icon_type_arrow-left {
+	background-image: url('icon_type_arrow.svg');
+}
+.icon_type_arrow-right {
+	background-image: url('icon_type_arrow.svg');
+	transform: rotate(180deg);
+}
+.icon_type_arrow-up {
+	background-image: url('icon_type_arrow.svg');
+	transform: rotate(-90deg) scale(1);
+}
+.icon_type_plus {
+	background-image: url('icon_type_close-white.svg');
+	transform: rotate(45deg);
+}
+.icon_type_girl-close {
+	background-size: cover;
+	background-image: url('icon_type_girl-close.svg');
+}
+.icon_type_party {
+	background-size: cover;
+	background-image: url('icon_type_party.svg');
+}

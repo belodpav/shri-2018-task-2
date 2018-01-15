@@ -1,0 +1,8 @@
+.meeting { 
+	height: 100%;
+	background-color: #D5DFE9;
+	position: relative;
+}
+ .meeting:active {
+	background-color: #98A9B9;
+} 

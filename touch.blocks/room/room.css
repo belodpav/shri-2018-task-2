@@ -1,0 +1,47 @@
+.room { 
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 12px 0 12px;
+	width: 100%;
+	height: 44px;
+	border-radius: 4px;
+	background-color: #e9ecef;
+}
+.room_state_current {
+	background-color: #007DFF;
+}
+.room_state_current .room__time-range {
+	color: #fff;
+}
+.room_state_current .room__name {
+	color: #fff;
+}
+.room__time-range {
+	margin-right: 12px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 17px;
+	color: #000;
+}
+.room__name {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17px;
+	color: #000;
+	white-space: nowrap;
+	max-width: calc(100% - 130px);
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+}
+.room__clear {
+	display: none;
+	margin-left: auto;
+	margin-right: 0;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+.room__clear_visible {
+	display: inline-block;
+}

@@ -1,0 +1,51 @@
+
+.app {
+	height: calc(100vh - 71px);
+}
+.app__date-control {
+	padding: 0 24px;
+	width: 100%;
+	height: 100%;
+	border-bottom: none;
+	position: static;
+	top: 0;
+	left: 0;
+}
+.app__time {
+	padding-top: 0;
+	height: 41px;
+}
+
+.app__body {
+	height: calc(100% - 41px);
+	margin-top: 41px;
+	background-color: #fff;
+}
+.app__aside {
+	width: 245px;
+}
+.app__timegrid,
+.app__timeline {
+	width: calc(100% - 245px);
+	min-width: 1035px;
+}
+.app::-webkit-scrollbar {
+    width: 16px;  
+}
+.app::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.app::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-clip: content-box;
+  border-radius: 100px;
+  border: 4px solid #fff;
+  background-color: #d5dfe9;
+}
+
+.app__content {
+	height: calc(100% - 41px);
+	margin-top: 41px;
+}
+
+

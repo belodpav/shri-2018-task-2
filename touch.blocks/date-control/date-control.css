@@ -1,0 +1,11 @@
+.date-control {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.date-control__date {
+	font-size: 15px;
+	line-height: 18px;
+	color: #000;
+	font-weight: 500;
+}

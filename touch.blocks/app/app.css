@@ -1,0 +1,79 @@
+
+.app {
+	width: 100%;
+	height: calc(100vh - 49px);
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: fixed;
+	scroll-behavior: smooth;
+}
+.app__header {
+	width: 100%;
+}
+.app__date-control {
+	padding: 0 16px;
+	width: 100vw;
+	height: 57px;
+	border-bottom: 1px solid #E9ECEF;
+	position: fixed;
+	top: 49px;
+	left: 0;
+}
+.app__time {
+	padding-top: 57px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	width: 100%;
+	min-width: 1280px;
+	height: 89px;
+	background-color: #fff;
+	border-bottom: 1px solid #E9ECEF;
+}
+.app__body {
+	display: flex;
+	height: calc(100% - 89px);
+	width: 100%;
+    min-width: 1280px;
+	overflow-y: auto;
+	background-color: #F6F7F9;
+	margin-top: 89px;
+}
+.app__aside {
+	width: 181px;
+	height: 100%;
+}
+.app__timegrid,
+.app__timeline {
+	width: calc(100% - 181px);
+	min-width: 1099px;
+}
+.app__timegrid {
+	height: 100%;
+	background-color: #F6F7F9;
+}
+.app__rooms {
+	border-right: 1px solid #E9ECEF;
+}
+
+.app__timeline .timegrid__column,
+.app__timeline .timegrid__column:first-of-type {
+	border: none;
+}
+.app__content {
+	min-width: 1280px;
+	width: 100%;
+	height: calc(100% - 89px);
+	margin-top: 89px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-bottom: 50px;
+}
+
+

@@ -1,0 +1,9 @@
+.change-meeting__submit-bar {
+	display: none;
+}
+.submit-bar {
+	display: flex;
+}
+.change-meeting__footer {
+	display: flex;
+}

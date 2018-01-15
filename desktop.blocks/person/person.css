@@ -1,0 +1,8 @@
+.person__avatar {
+	width: 24px;
+	height: 24px;
+}
+.person__name {
+	font-size: 13px;
+	line-height: 17px;
+}

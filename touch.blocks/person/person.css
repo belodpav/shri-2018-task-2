@@ -1,0 +1,21 @@
+.person { 
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.person__avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+.person__avatar-img {
+	width: 100%;
+}
+.person__name {
+	margin-left: 8px;
+	font-size: 15px;
+	line-height: 17px;
+}

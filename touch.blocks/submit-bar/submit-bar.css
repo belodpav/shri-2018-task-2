@@ -1,0 +1,13 @@
+.submit-bar { 
+	padding: 0 16px;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	border-top: 1px solid #E9ECEF;
+}
+.submit-bar__button {
+	margin-right: 16px;
+}
+.submit-bar__button:last-child {
+	margin-right: 0;
+}

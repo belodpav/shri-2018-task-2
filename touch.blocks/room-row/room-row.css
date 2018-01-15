@@ -1,0 +1,106 @@
+.room-row {  
+	min-width: 1280px;
+	width: 100vw;
+	height: 58px;
+	display: flex;
+	align-items: center;
+}
+.room-row__aside {
+	height: 100%;
+	width: 181px;
+	padding-left: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #fff;
+}
+.room-row__title {
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	line-height: 17px;
+	margin-bottom: 2px;
+	overflow: hidden;
+	max-width: 140px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.room-row__people-count {
+	font-size: 13px;
+	color: #000;
+	line-height: 17px;
+}
+.room-row__timegrid {
+	height: 28px;
+	background-color: transparent;
+}
+.room-row_state_active .room-row__title {
+	color: #0070E0;
+}
+.room-row_state_full .room-row__title,
+.room-row_state_full .room-row__people-count  {
+	color: #858E98;
+}
+.room-row__timegrid-body {
+	display: flex;
+	align-items: center;
+}
+.room-row__meetings {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+.room-row__main {
+	background-color: #D5DFE9;
+    width: calc(100% - 181px);
+	height: 100%;
+	position: relative;
+}
+.room-row__shortcut-title {
+	height: 24px;
+	padding: 5px 8px;
+	background: #fff;
+	box-shadow: 0 1px 8px 0 rgba(0,44,92,0.28);
+	border-radius: 4px;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: 700;
+	color: #262626;
+	letter-spacing: 0.4px;
+}
+.room-row_state_full .room-row__shortcut-title {
+	color: #858E98;
+}
+.room-row__timegrid_layer_1,
+.room-row__timegrid_layer_2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.room-row__timegrid_layer_1 {
+	z-index: 10;
+}
+.room-row__timegrid_layer_1 .timegrid__column {
+	z-index: 1;
+}
+.room-row__timegrid_layer_2 {
+	z-index: 100;
+}
+.room-row__timegrid_layer_2:hover {
+	opacity: 1;
+}
+.room-row__timegrid_layer_2 .meeting, .room-row__timegrid_layer_2 .free-time-range {
+	opacity: 0;
+}
+.room-row__timegrid_layer_2 .meeting:active, .room-row__timegrid_layer_2 .free-time-range:active{
+	opacity: 1;
+}
+.room-row__meeting-back {
+	position: absolute;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}

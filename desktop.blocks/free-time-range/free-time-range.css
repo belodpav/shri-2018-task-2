@@ -1,0 +1,13 @@
+.free-time-range__add {
+	max-width: 57px;
+	border-radius: 2px;
+}
+.free-time-range__add:active {
+	background-color: #1D00FE;
+}
+.free-time-range__plus-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: auto;
+}

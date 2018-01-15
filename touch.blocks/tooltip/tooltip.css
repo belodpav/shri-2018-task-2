@@ -1,0 +1,68 @@
+.tooltip { 
+	position: absolute;
+	z-index: 1000000;
+	height: 130px;
+	width: 100vw;
+	padding: 16px;
+	background: #fff;
+	box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+	border-radius: 8px;
+}
+.tooltip_visible_true {
+	display: block;
+}
+.tooltip:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -100%);
+    border-style: solid;
+    border-style: solid;
+	border-width: 0 7px 7px 7px;
+	border-color: transparent transparent #fff transparent;
+}
+.tooltip_pos_bottom {
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.tooltip__edit {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+.tooltip__title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	width: calc(100% - 34px);
+	text-overflow: ellipsis;
+}
+.tooltip__info {
+	margin: 8px 0 16px;
+	font-size: 15px;
+	color: #000;
+	line-height: 17px;
+}
+.tooltip__date {
+}
+.tooltip__time-range {
+}
+.tooltip__room {
+}
+.tooltip__people {
+	display: flex;
+	align-items: center;
+}
+.tooltip__person {
+}
+.tooltip__people-count {
+	color: #89919b;
+	font-size: 15px;
+	line-height: 17px;
+}

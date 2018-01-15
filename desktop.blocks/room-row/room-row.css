@@ -1,0 +1,37 @@
+.room-row { 
+	height: 44px;
+}
+.room-row__aside {
+	width: 245px;
+	padding-left: 25px;
+	border-right: 1px solid #E9ECEF;
+}
+.room-row__title {
+	max-width: 200px;
+}
+.room-row__main {
+    width: calc(100% - 245px);
+	height: 28px;
+}
+.room-row__shortcut-title {
+	color: #858E98;
+	letter-spacing: 0.4px;
+}
+.room-row__timegrid_layer_1,
+.room-row__timegrid_layer_2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.room-row__timegrid_layer_2:hover {
+	opacity: 1;
+}
+.room-row__timegrid_layer_2 .meeting, .room-row__timegrid_layer_2 .free-time-range {
+	opacity: 0;
+}
+.room-row__timegrid_layer_2 .meeting:hover, .room-row__timegrid_layer_2 .free-time-range:hover {
+	opacity: 1;
+}

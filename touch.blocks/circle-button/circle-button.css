@@ -1,0 +1,29 @@
+.circle-button {
+	display: flex;
+	text-decoration: none;
+	border-radius: 100%;
+    overflow: hidden;
+}
+.circle-button_size_md {
+	height: 24px;
+	width: 24px;
+}
+.circle-button_size_lg {
+	width: 32px;
+	height: 32px;
+}
+.circle-button__icon {
+	margin: auto;
+	width: 24px; 
+	height: 24px;
+	border-radius: 100%;
+}
+.circle-button_theme_normal {
+	background-color:  #e9ecef;
+}
+.circle-button_theme_normal .circle-button__icon {
+	opacity: .43;
+}
+.circle-button_theme_normal:active .circle-button__icon {
+	opacity: 1;
+}
