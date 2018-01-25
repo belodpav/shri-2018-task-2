@@ -10,8 +10,8 @@ var gulp = require('gulp'),
 
 var params = {
   out: 'public',
-  htmlSrc: 'new-meeting_autocomplete_true.html',
-  levels: ['touch.blocks', 'desktop.blocks'] // Уровни переопределения, например ['touch.blocks', 'desktop.blocks']
+  htmlSrc: 'main_calendar.html',
+  levels: ['touch.blocks', 'desktop.blocks'] // Уровни переопределения
 },
   getFileNames = require('html2bl').getFileNames(params);
 

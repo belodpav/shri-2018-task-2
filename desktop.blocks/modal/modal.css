@@ -1,8 +1,12 @@
 @media (min-width: 1280px) {
   .modal { 
   	position: absolute;
+    background: rgba(0,16,33,0.40);
   }
   .modal__window {
   	margin: auto;
+  }
+  .modal__br_touch_false {
+    display: inline;
   }
 }

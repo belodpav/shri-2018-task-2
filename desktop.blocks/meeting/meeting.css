@@ -6,4 +6,8 @@
   .meeting:active {
   	background-color: #8594a2;
   }
+  .meeting_state_current {
+    cursor: pointer;
+    background-color: #8594a2;
+  }
 }

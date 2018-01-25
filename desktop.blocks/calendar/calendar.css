@@ -1,0 +1,11 @@
+@media (min-width: 1280px) {
+  .calendar__day,
+  .calendar__day-name,
+  .calendar__time-name {
+    width: 24px;
+    line-height: 24px;
+    height: 24px;
+    font-size: 12px;
+    margin: 1px;
+  }
+}

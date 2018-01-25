@@ -58,3 +58,6 @@
 .modal__button:last-child {
 	margin-right: 0;
 }
+.modal__br_touch_false {
+	display: none;
+}

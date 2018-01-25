@@ -38,6 +38,7 @@
 .input-autocomplete__item:hover,
 .input-autocomplete__item_state_selected {
 	background-color: #F6F7F9;
+  font-weight: 700;
 }
 .input-autocomplete__item_state_selected {
 	font-weight: 700;

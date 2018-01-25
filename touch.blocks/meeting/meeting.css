@@ -3,6 +3,7 @@
 	background-color: #D5DFE9;
 	position: relative;
 }
- .meeting:active {
+ .meeting:active,
+ .meeting_state_current  {
 	background-color: #98A9B9;
-} 
+}

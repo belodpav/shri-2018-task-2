@@ -2,6 +2,7 @@
 	.button { 
 		font-size: 13px;
 		line-height: 16px;
+		cursor: pointer;
 	}
 	.button_size_md {
 		height: 36px; 

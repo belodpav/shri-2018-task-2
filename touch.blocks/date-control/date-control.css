@@ -9,3 +9,6 @@
 	color: #000;
 	font-weight: 500;
 }
+.date-control__date_state_active {
+  color: #0070E0;
+}

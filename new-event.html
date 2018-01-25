@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
- 
+
 		html {
-			min-height: 100%;
+			height: 100%;
 		}
+
 		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
 		*,
 		*:after,
@@ -37,13 +38,13 @@
 		</a>
 	</header>
 
-	<div class="change-meeting">
-		<div class="change-meeting__editor editor">
+	<div class="new-meeting">
+		<div class="new-meeting__editor editor">
 			<div class="editor__header">
 				<div class="editor__title">
-					Редактирование встречи
+					Новая встреча
 				</div>
-				<button class="editor__header-close circle-button circle-button_size_md circle-button_theme_normal">
+				<button class="editor__header-close circle-button circle-button_size_md circle-button_theme_normal circle-button_touch_false">
 					<span class="circle-button__icon icon icon_type_close"></span>
 				</button>
 			</div>
@@ -52,7 +53,7 @@
 				<div class="editor__item">
 					<label class="editor__label" for="">Тема</label>
 					<div class="input input_size_md input_theme_normal input_actions_true">
-						<input type="text" class="input__control" placeholder="О чем будем говорить?" value="Рассуждения о высоком">
+						<input type="text" class="input__control" placeholder="О чём будете говорить?">
 						<span class="input__clear icon icon_type_close"></span>
 					</div>
 				</div>				
@@ -89,7 +90,7 @@
 					<div class="editor__persons-box editor__item_touch_space-line">
 						<div class="editor__person">
 							<div class="person">
-								<div class="person__avatar">
+								<div class="person__avatar"> 
 									<img class="person__avatar-img" src="images/person__avatar-00.jpg">
 								</div>
 								<div class="person__name">
@@ -123,58 +124,35 @@
 					</div>
 				</div>
 				<div class="editor__item editor__item_space_bottom">
-					<label class="editor__label" for="">Выбранная переговорка</label>
+					<label class="editor__label" for="">Рекомендованные переговорки</label>
 					<div class="editor__rooms-box">
-						<div class="editor__room room room_state_current">
+						<div class="editor__room room">
+							<div class="room__time-range">16:00&mdash;16:30</div>
+							<div class="room__name">Готем · 4 этаж</div>
+							<span class="room__clear icon icon_type_close-white"></span>
+						</div>
+						<div class="editor__room room">
 							<div class="room__time-range">16:00&mdash;16:30</div>
 							<div class="room__name">Поле непаханное · 4 этаж</div>
-							<span class="room__clear room__clear_visible icon icon_type_close-white"></span>
+							<span class="room__clear icon icon_type_close-white"></span>
+						</div>
+						<div class="editor__room room">
+							<div class="room__time-range">16:00&mdash;16:30</div>
+							<div class="room__name">Тёмная башня · 4 этаж</div>
+							<span class="room__clear icon icon_type_close-white"></span>
 						</div>
 					</div>
 				</div>
-				<div class="editor__item editor__item_touch_visible editor__item_space_bottom">
-					<div class="editor__item-delete">
-						Удалить встречу
-					</div>
-				</div>
 			</div>
 			</div>
 		</div>
-		<div class="change-meeting__submit-bar">
-			<button class="change-meeting__button button button_theme_normal button_size_md">Отмена</button>
-			<button class="button button_theme_active button_size_md">Сохранить</button>
+		<div class="new-meeting__submit-bar">
+			<div class="new-meeting__message">Выберете переговорку</div>
+			<button class="new-meeting__button button button_theme_normal button_size_md" disabled>Создать встречу</button>
 		</div>
-		<div class="change-meeting__footer submit-bar">
+		<div class="new-meeting__footer submit-bar">
 			<button class="submit-bar__button button button_theme_normal button_size_md">Отмена</button>
-			<button class="submit-bar__button button button_theme_normal button_size_md">Удалить встречу</button>
-			<button class="submit-bar__button button button_theme_normal button_size_md">Сохранить</button>
-
-		</div>
-	</div>
-
-	
-
-
-<div style="display:none" class="modal">
-	<div class="modal__window">
-		<span class="modal__icon icon icon_type_girl-close"></span>
-		<div class="modal__text">Встреча будет удалена безвозвратно</div>
-		<div class="modal__buttons">
-			<button class="modal__button button button_theme_normal button_size_md">Отмена</button>
-			<button class="modal__button button button_theme_normal button_size_md">Удалить</button>
-		</div>
-	</div>
-</div>
-
-	<div style="display:none" class="modal">
-		<div class="modal__window">
-			<span class="modal__icon icon icon_type_party"></span>
-			<div class="modal__text">Встреча создана!</div>
-			<div class="modal__date">14 декабря, 15:00—17:00</div>
-			<div class="modal__place">Готем&nbsp;&middot;&nbsp;4 этаж</div>
-			<div class="modal__buttons">
-				<button class="modal__button button button_theme_active button_size_md">Хорошо</button>
-			</div>
+			<button class="submit-bar__button button button_theme_active button_size_md">Создать встречу</button>
 		</div>
 	</div>
 </body>
