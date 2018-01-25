@@ -1,67 +1,69 @@
-.editor__body {
-	max-width: 872px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.editor__header {
-	max-width: 872px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 0;
-	padding-right: 0;
-	margin-bottom: 20px;
-}
-.editor__grid {
-	margin-left: -16px;
-	margin-right: -16px;
-	display: flex;
-	flex-wrap: wrap;
-}
-.editor__item {
-	width: 50%;
-	margin-bottom: 24px;
-}
-.editor__row {
-	flex-wrap: nowrap;
-}
-.editor__item-date {
-	width: 56.666666%;
-	max-width: 238px;
-	margin-right: 16px;
-}
-.editor__item-time {
-	width: 17.1428571428%;
-	max-width: 72px;
-}
-.editor__item_touch_no-label .editor__label {
-	line-height: 16px;
-	font-size: 13px;
-}
-.editor__item_space_bottom {
-	padding-bottom: 0;
-	border-bottom: none;
-}
-.editor__header-close {
-	display: flex;
-}
-.editor__item_touch_visible {
-	display: none;
-}
-.editor__item-time-dash {
-	line-height: 38px;
-}
-.editor__persons-box {
-	margin-top: 12px;
-}
-.editor__person {
-	width: auto;
-	margin: 0 8px 8px 0;
-}
-.editor__person:last-child {
-	margin: 0 8px 8px 0;
-}
-.editor__person-clear {
-}
-.editor__person:hover .editor__person-clear {
-	opacity: 1;
+@media (min-width: 1280px) {
+	.editor__body {
+		max-width: 872px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.editor__header {
+		max-width: 872px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 20px;
+	}
+	.editor__grid {
+		margin-left: -16px;
+		margin-right: -16px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.editor__item {
+		width: 50%;
+		margin-bottom: 24px;
+	}
+	.editor__row {
+		flex-wrap: nowrap;
+	}
+	.editor__item-date {
+		width: 56.666666%;
+		max-width: 238px;
+		margin-right: 16px;
+	}
+	.editor__item-time {
+		width: 17.1428571428%;
+		max-width: 72px;
+	}
+	.editor__item_touch_no-label .editor__label {
+		line-height: 16px;
+		font-size: 13px;
+	}
+	.editor__item_space_bottom {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	.editor__header-close {
+		display: flex;
+	}
+	.editor__item_touch_visible {
+		display: none;
+	}
+	.editor__item-time-dash {
+		line-height: 38px;
+	}
+	.editor__persons-box {
+		margin-top: 12px;
+	}
+	.editor__person {
+		width: auto;
+		margin: 0 8px 8px 0;
+	}
+	.editor__person:last-child {
+		margin: 0 8px 8px 0;
+	}
+	.editor__person-clear {
+	}
+	.editor__person:hover .editor__person-clear {
+		opacity: 1;
+	}
 }

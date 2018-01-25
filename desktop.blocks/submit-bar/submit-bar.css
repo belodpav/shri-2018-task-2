@@ -1,4 +1,6 @@
-.submit-bar { 
-	display: flex;
-	height: 76px;
+@media (min-width: 1280px) {
+  .submit-bar { 
+  	display: flex;
+  	height: 76px;
+  }
 }

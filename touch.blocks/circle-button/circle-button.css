@@ -27,3 +27,6 @@
 .circle-button_theme_normal:active .circle-button__icon {
 	opacity: 1;
 }
+.circle-button_touch_false {
+	display: none;
+}

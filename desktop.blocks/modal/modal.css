@@ -1,6 +1,8 @@
-.modal { 
-	position: absolute;
-}
-.modal__window {
-	margin: auto;
+@media (min-width: 1280px) {
+  .modal { 
+  	position: absolute;
+  }
+  .modal__window {
+  	margin: auto;
+  }
 }

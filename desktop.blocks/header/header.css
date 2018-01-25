@@ -1,4 +1,6 @@
-.header {
-	padding: 0 24px;
-	height: 71px;
+@media (min-width: 1280px) {
+  .header {
+  	padding: 0 24px;
+  	height: 71px;
+  }
 }

@@ -1,8 +1,12 @@
-.person__avatar {
-	width: 24px;
-	height: 24px;
-}
-.person__name {
-	font-size: 13px;
-	line-height: 17px;
+@media (min-width: 1280px) {
+  .person__avatar,
+  .person_size_sm .person__avatar {
+  	width: 24px;
+  	height: 24px;
+  }
+  .person__name,
+  .person_size_sm .person__name {
+  	font-size: 13px;
+  	line-height: 15px;
+  }
 }

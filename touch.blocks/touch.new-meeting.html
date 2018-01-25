@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+		html {
+			height: 100%;
+		}
+
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+		*,
+		*:after,
+		*:before {
+		  border: 0;
+		  margin: 0;
+		  outline: 0;
+		  padding: 0;
+		  border-radius: 0;
+		  box-sizing: border-box;
+		}
+
+		body {
+		  color: #000;
+		  font-size: 13px;
+		  font-family: Neue Helvetica, Open Sans, Helvetica, Arial, sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<header class="site__header header">
+		<a href="" class="logo" target="_top">
+			<span class="logo__text">Яндекс Переговорки</span>
+		</a>
+	</header>
+
+	<div class="new-meeting">
+		<div class="new-meeting__editor editor">
+			<div class="editor__header">
+				<div class="editor__title">
+					Новая встреча
+				</div>
+				<button class="editor__header-close circle-button circle-button_size_md circle-button_theme_normal">
+					<span class="circle-button__icon icon icon_type_close"></span>
+				</button>
+			</div>
+			<div class="editor__body">
+				<div class="editor__grid">
+				<div class="editor__item">
+					<label class="editor__label" for="">Тема</label>
+					<div class="input input_size_md input_theme_normal input_actions_true">
+						<input type="text" class="input__control" placeholder="О чем будем говорить?">
+						<span class="input__clear icon icon_type_close"></span>
+					</div>
+				</div>				
+				<div class="editor__row editor__item editor__item_space_bottom">
+					<div class="editor__item-date">
+						<label class="editor__label" for="">Дата и время</label>
+						<div class="input input_size_md input_theme_normal input_actions_true">
+							<input type="text" class="input__control" value="14 декабря, 2017">
+							<span class="input__chose-date icon icon_type_calendar">
+						</div>
+					</div>
+					<div class="editor__item-time editor__item_touch_no-label">
+						<label class="editor__label" for="">Начало</label>
+						<div class="input input_size_md input_theme_normal">
+							<input type="text" class="input__control" value="16:00">
+						</div>
+					</div>
+					<div class="editor__item_touch_no-label">
+						<label class="editor__label" for="">&nbsp;</label>
+						<div class="editor__item-time-dash">&mdash;</div>
+					</div>
+					<div class="editor__item-time editor__item_touch_no-label">
+						<label class="editor__label" for="">Конец</label>
+						<div class="input input_size_md input_theme_normal">
+							<input type="text" class="input__control" value="16:30">
+						</div>
+					</div>
+				</div>
+				<div class="editor__item editor__item_space_bottom">
+					<label class="editor__label" for="">Участники</label>
+					<div class="input input_size_md input_theme_normal input_actions_true">
+						<input type="text" class="input__control" placeholder="Например, Тор Одинович">
+					</div>
+					<div class="editor__persons-box editor__item_touch_space-line">
+
+					</div>
+				</div>
+				<div class="editor__item editor__item_space_bottom">
+					<label class="editor__label" for="">Рекомендованные переговорки</label>
+					<div class="editor__rooms-box">
+						<div class="editor__room room">
+							<div class="room__time-range">16:00&mdash;16:30</div>
+							<div class="room__name">Готем · 4 этаж</div>
+							<span class="room__clear icon icon_type_close-white"></span>
+						</div>
+						<div class="editor__room room">
+							<div class="room__time-range">16:00&mdash;16:30</div>
+							<div class="room__name">Тёмная башня · 4 этаж</div>
+							<span class="room__clear icon icon_type_close-white"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="new-meeting__submit-bar">
+			<div class="new-meeting__message">Выберете переговорку</div>
+			<button class="new-meeting__button button button_theme_normal button_size_md" disabled>Создать встречу</button>
+		</div>
+		<div class="new-meeting__footer submit-bar">
+			<button class="submit-bar__button button button_theme_normal button_size_md">Отмена</button>
+			<button class="submit-bar__button button button_theme_active button_size_md">Создать встречу</button>
+		</div>
+	</div>
+</body>
+</html>

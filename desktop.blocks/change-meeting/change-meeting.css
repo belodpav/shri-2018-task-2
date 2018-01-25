@@ -1,9 +1,11 @@
-.change-meeting__submit-bar {
-	display: none;
-}
-.submit-bar {
-	display: flex;
-}
-.change-meeting__footer {
-	display: flex;
+@media (min-width: 1280px) {
+  .change-meeting__submit-bar {
+  	display: none;
+  }
+  .submit-bar {
+  	display: flex;
+  }
+  .change-meeting__footer {
+  	display: flex;
+  }
 }

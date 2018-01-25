@@ -1,12 +1,14 @@
-.room { 
-	padding: 0 12px 0 10px;
-	height: 37px;
-}
-.room__time-range {
-	margin-right: 16px;
-	font-size: 13px;
-}
-.room__name {
-	font-size: 13px;
-	max-width: 260px;
+@media (min-width: 1280px) {
+  .room { 
+  	padding: 0 12px 0 10px;
+  	height: 37px;
+  }
+  .room__time-range {
+  	margin-right: 16px;
+  	font-size: 13px;
+  }
+  .room__name {
+  	font-size: 13px;
+  	max-width: 260px;
+  }
 }

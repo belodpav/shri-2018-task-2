@@ -1,7 +1,9 @@
-.meeting:hover {
-	background-color: #98A9B9;
-	z-index: 1000;
-}
-.meeting:active {
-	background-color: #8594a2;
+@media (min-width: 1280px) {
+  .meeting:hover {
+  	background-color: #98A9B9;
+  	z-index: 1000;
+  }
+  .meeting:active {
+  	background-color: #8594a2;
+  }
 }

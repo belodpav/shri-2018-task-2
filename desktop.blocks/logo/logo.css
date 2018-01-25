@@ -1,5 +1,7 @@
-.logo { 
-	width: 175px;
-	height: 26px;
-	background-image: url('logo@desktop.svg');
+@media (min-width: 1280px) {
+  .logo { 
+  	width: 175px;
+  	height: 26px;
+  	background-image: url('logo@desktop.svg');
+  }
 }

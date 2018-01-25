@@ -20,6 +20,9 @@
 .input_theme_normal .input__control:focus {
 	border: 2px solid #007DFF;
 }
+.input_theme_normal.input_focused_true .input__control {
+	border: 2px solid #007DFF;
+}
 
 .input_theme_normal .input__control:focus + .input__clear {
 	opacity: 1;
@@ -49,6 +52,10 @@
 	z-index: 3;
 	opacity: .43;
 	cursor: pointer;
+	display: none;
+}
+.input_clear_true .input__clear {
+	display: inline-block;
 }
 .input_size_md .input__chose-date {
 	margin: 2px;

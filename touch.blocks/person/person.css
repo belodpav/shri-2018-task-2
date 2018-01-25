@@ -19,3 +19,11 @@
 	font-size: 15px;
 	line-height: 17px;
 }
+.person_size_sm .person__avatar {
+	width: 24px;
+	height: 24px;
+}
+.person_size_sm .person__name {
+	font-size: 13px;
+	line-height: 15px;
+}
