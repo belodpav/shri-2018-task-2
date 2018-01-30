@@ -1,4 +1,7 @@
 @media (min-width: 1280px) {
+	.editor {
+		padding-bottom: 106px;
+	}
 	.editor__body {
 		max-width: 872px;
 		margin-left: auto;

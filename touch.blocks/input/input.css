@@ -1,7 +1,7 @@
 .input { 
 	position: relative;
-    width: 100%;
-    vertical-align: top;   
+  width: 100%;
+  vertical-align: top;   
 }
 .input__control::-ms-clear{
 	display: none;
@@ -9,12 +9,12 @@
 .input_theme_normal .input__control {
 	color: #000;
 	letter-spacing: 0.47px;
-	font-family: Neue Helvetica, Open Sans, Helvetica, Arial, sans-serif;
+	font-family: 'Neue Helvetica', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .input_theme_normal .input__control::placeholder {
 	color: #858e98;
 	letter-spacing: 0.47px;
-	font-family: Neue Helvetica, Open Sans, Helvetica, Arial, sans-serif;
+	font-family: 'Neue Helvetica', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .input_theme_normal .input__control:focus {

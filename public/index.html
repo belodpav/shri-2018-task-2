@@ -1,167 +1,810 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
- 
-    html {
-      min-height: 100%;
-    }
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
-    *,
-    *:after,
-    *:before {
-      border: 0;
-      margin: 0;
-      outline: 0;
-      padding: 0;
-      border-radius: 0;
-      box-sizing: border-box;
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.site__footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+		}
+		.site__editor {
+			width: 870px;
+			margin: 0 auto;
+			margin-top: 32px;
+		}
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+		
+		html,
+		body {
+		  height: 100%;
+		}
+		
+		*,
+		*:after,
+		*:before {
+		  border: 0;
+		  margin: 0;
+		  outline: 0;
+		  padding: 0;
+		  border-radius: 0;
+		  box-sizing: border-box;
+		}
 
-    body {
-      color: #000;
-      font-size: 13px;
-      font-family: Neue Helvetica, Open Sans, Helvetica, Arial, sans-serif;
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
+		body {
+		  color: #000;
+		  font-size: 13px;
+		  font-family: 'Neue Helvetica', 'Open Sans', Helvetica, Arial, sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  
-  <header class="site__header header">
-    <a href="" class="logo" target="_top">
-      <span class="logo__text">Яндекс Переговорки</span>
-    </a>
-  </header>
+	<body>
+		<header class="app__header header">
+			<a href="" class="logo" target="_top">
+				<span class="logo__text">Яндекс Переговорки</span>
+			</a>
+			<button class="button_touch_hide button button_theme_active button_size_md">Создать встречу</button>
+		</header>
+		<div class="app">	
+			<div class="app__time time">
+				<div class="app__aside">
+					<div class="app__date-control date-control">
+						<button class="circle-button circle-button_size_lg circle-button_theme_normal">
+							<span class="circle-button__icon icon icon_type_arrow-left"></span>
+						</button>
+						<span class="date-control__date">14 дек&nbsp;&middot;&nbsp;Сегодня</span>
+						<button class="circle-button circle-button_size_lg circle-button_theme_normal">
+							<span class="circle-button__icon icon icon_type_arrow-right"></span>
+						</button>
+					</div>
+				</div>
+				<div class="app__timeline timegrid">
+					<div class="timegrid__offset-left"></div>
+					<div class="timegrid__body">
+						<span class="timegrid__current-time current-time-marker">11:05</span>
+						<div class="timegrid__column"><div class="timegrid__time timegrid__time_past_true">8:00</div></div>
+						<div class="timegrid__column"><div class="timegrid__time timegrid__time_past_true">9</div></div>
+						<div class="timegrid__column"><div class="timegrid__time timegrid__time_past_true">10</div></div>
+						<div class="timegrid__column"><div class="timegrid__time timegrid__time_past_true">11</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">12</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">13</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">14</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">15</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">16</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">17</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">18</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">19</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">20</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">21</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">22</div></div>
+						<div class="timegrid__column"><div class="timegrid__time">23</div></div>
+					</div>
+					<div class="timegrid__offset-right"></div>
+				</div>
+			</div>
+			<div class="app__body">
 
-  <div class="change-meeting">
-    <div class="change-meeting__editor editor">
-      <div class="editor__header">
-        <div class="editor__title">
-          Редактирование встречи
-        </div>
-        <button class="editor__header-close circle-button circle-button_size_md circle-button_theme_normal circle-button_touch_false">
-          <span class="circle-button__icon icon icon_type_close"></span>
-        </button>
-      </div>
-      <div class="editor__body">
-        <div class="editor__grid">
-        <div class="editor__item">
-          <label class="editor__label" for="">Тема</label>
-          <div class="input input_size_md input_theme_normal input_actions_true">
-            <input type="text" class="input__control" placeholder="О чём будете говорить?" value="Тестовое задание в ШРИ">
-            <span class="input__clear icon icon_type_close"></span>
-          </div>
-        </div>        
-        <div class="editor__row editor__item editor__item_space_bottom">
-          <div class="editor__item-date">
-            <label class="editor__label" for="">Дата и время</label>
-            <div class="input input_size_md input_theme_normal input_actions_true">
-              <input type="text" class="input__control" value="14 декабря, 2017">
-              <span class="input__chose-date icon icon_type_calendar">
-            </div>
-          </div>
-          <div class="editor__item-time editor__item_touch_no-label">
-            <label class="editor__label" for="">Начало</label>
-            <div class="input input_size_md input_theme_normal">
-              <input type="text" class="input__control" value="16:00">
-            </div>
-          </div>
-          <div class="editor__item_touch_no-label">
-            <label class="editor__label" for="">&nbsp;</label>
-            <div class="editor__item-time-dash">&mdash;</div>
-          </div>
-          <div class="editor__item-time editor__item_touch_no-label">
-            <label class="editor__label" for="">Конец</label>
-            <div class="input input_size_md input_theme_normal">
-              <input type="text" class="input__control" value="16:30">
-            </div>
-          </div>
-        </div>
-        <div class="editor__item editor__item_space_bottom">
-          <label class="editor__label" for="">Участники</label>
-          <div class="input input_size_md input_theme_normal input_actions_true">
-            <input type="text" class="input__control" placeholder="Например, Тор Одинович">
-          </div>
-          <div class="editor__persons-box editor__item_touch_space-line">
-            <div class="editor__person">
-              <div class="person">
-                <div class="person__avatar"> 
-                  <img class="person__avatar-img" src="images/person__avatar-00.jpg">
-                </div>
-                <div class="person__name">
-                  Лекс Лютер
-                </div>
-              </div>
-              <span class="editor__person-clear icon icon_type_close"></span>
-            </div>
-            <div class="editor__person">
-              <div class="person">
-                <div class="person__avatar">
-                  <img class="person__avatar-img" src="images/person__avatar-01.jpg">
-                </div>
-                <div class="person__name">
-                  Настя Скворцова
-                </div>
-              </div>
-              <span class="editor__person-clear icon icon_type_close"></span>
-            </div>
-            <div class="editor__person ">
-              <div class="person">
-                <div class="person__avatar">
-                  <img class="person__avatar-img" src="images/person__avatar-02.jpg">
-                </div>
-                <div class="person__name">
-                  Том Андерсон
-                </div>
-              </div>
-              <span class="editor__person-clear icon icon_type_close"></span>
-            </div>
-          </div>
-        </div>
-        <div class="editor__item editor__item_space_bottom">
-          <label class="editor__label" for="">Ваша переговорка</label>
-          <div class="editor__rooms-box">
-            <div class="editor__room room room_state_current">
-              <div class="room__time-range">16:00&mdash;16:30</div>
-              <div class="room__name">Готем · 4 этаж</div>
-              <span class="room__clear room__clear_visible icon icon_type_close-white"></span>
-            </div>
-          </div>
-        </div>
-        <div class="editor__item editor__item_touch_visible editor__item_space_bottom">
-          <div class="editor__item-delete">
-            Удалить встречу
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="change-meeting__submit-bar">
-      <button class="change-meeting__button button button_theme_normal button_size_md">Отмена</button>
-      <button class="button button_theme_active button_size_md">Сохранить</button>
-    </div>
-    <div class="change-meeting__footer submit-bar">
-      <button class="submit-bar__button button button_theme_normal button_size_md">Отмена</button>
-      <button class="submit-bar__button button button_theme_normal button_size_md">Удалить встречу</button>
-      <button class="submit-bar__button button button_theme_normal button_size_md">Сохранить</button>
+					<div class="app__content">
+						<style>
+							.shortcut-item {
+								position: absolute;
+								top: 0;
+								left: 0;
+								
+								opacity: 0;
+							}
+							
+						</style>
+						<div class="floor">
+							<div class="floor__header">
+								<div class="floor__header-aside">
+									<div class="floor__title">7 этаж</div>
+								</div>
+								<div class="floor__header-timegrid timegrid">
+									<div class="timegrid__offset-left"></div>
+									<div class="timegrid__body">
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="shortcut-item floor__shortcut-title">7 этаж</div>
+									</div>
+									<div class="timegrid__offset-right"></div>
+								</div>
+							</div>
+							<div class="floor__rooms-list">
 
-    </div>
-  </div>
+								<div class="floor__room room-row room-row_state_full">
+									<div class="room-row__aside">
+										<div class="room-row__title">Ржавый Фред</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 20%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Ржавый Фред</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
 
-  <div class="modal">
-    <div class="modal__window">
-      <span class="modal__icon icon icon_type_girl-close"></span>
-      <div class="modal__text">Встреча будет<br class="modal__br_touch_false" /> удалена безвозвратно</div>
-      <div class="modal__buttons">
-        <button class="modal__button button button_theme_normal button_size_md">Отмена</button>
-        <button class="modal__button button button_theme_normal button_size_md">Удалить</button>
-      </div>
-    </div>
-  </div>
- 
-</body>
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Прачечная</div>
+										<div class="room-row__people-count">до 10 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 33%"></div>
+														<div class="free-time-range" style="width: 5%"></div>
+														<div class="meeting" style="width: 12%"></div>
+														<div class="free-time-range" style="width: 20%"></div>
+														<div class="meeting" style="width: 30%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Прачечная</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 33%"></div>
+													<div class="free-time-range" style="width: 5%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 12%"></div>
+													<div class="free-time-range" style="width: 20%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 30%"></div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="floor__room room-row room-row_state_active">
+									<div class="room-row__aside">
+										<div class="room-row__title">Желтый дом</div>
+										<div class="room-row__people-count">до 10 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting meeting_state_current" style="width: 13%"></div>
+														<div class="free-time-range" style="width: 25%"></div>
+														<div class="meeting" style="width: 12%"></div>
+														<div class="free-time-range" style="width: 30%"></div>
+														<div class="meeting" style="width: 20%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Прачечная</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting meeting_state_current" style="width: 13%"></div>
+													<div class="free-time-range" style="width: 25%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 12%"></div>
+													<div class="free-time-range" style="width: 30%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 20%"></div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+								<div class="floor__room room-row room-row_state_full">
+									<div class="room-row__aside">
+										<div class="room-row__title">Оранжевый тюльпан</div>
+										<div class="room-row__people-count">до 10 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 20%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Оранжевый тюльпан</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+							</div>
+						</div>
+
+						
+
+						<div class="floor">
+							<div class="floor__header">
+								<div class="floor__header-aside">
+									<div class="floor__title">6 этаж</div>
+								</div>
+								<div class="floor__header-timegrid timegrid">
+									<div class="timegrid__offset-left"></div>
+									<div class="timegrid__body">
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="timegrid__column timegrid__column_border_false"></div>
+										<div class="shortcut-item floor__shortcut-title">6 этаж</div>
+									</div>
+									<div class="timegrid__offset-right"></div>
+								</div>
+							</div>
+							<div class="floor__rooms-list">
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Джокер</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 20%"></div>
+														<div class="free-time-range" style="width: 16%"></div>
+														<div class="meeting" style="width: 50%"></div>
+														<div class="free-time-range" style="width: 14%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Джокер</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 20%"></div>
+													<div class="free-time-range" style="width: 16%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 50%"></div>
+													<div class="free-time-range" style="width: 14%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Мариванна</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 5%"></div>
+														<div class="free-time-range" style="width: 27%"></div>
+														<div class="meeting" style="width: 3%"></div>
+														<div class="meeting" style="width: 10%"></div>
+														<div class="free-time-range" style="width: 20%"></div>
+														<div class="meeting" style="width: 35%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Мариванна</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 5%"></div>
+													<div class="free-time-range" style="width: 27%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 3%"></div>
+													<div class="meeting" style="width: 10%"></div>
+													<div class="free-time-range" style="width: 20%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 35%"></div>
+
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Тонкий Боб</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 33%"></div>
+														<div class="free-time-range" style="width: 5%"></div>
+														<div class="meeting" style="width: 12%"></div>
+														<div class="free-time-range" style="width: 20%"></div>
+														<div class="meeting" style="width: 30%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Тонкий Боб</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 33%"></div>
+													<div class="free-time-range" style="width: 5%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 12%"></div>
+													<div class="free-time-range" style="width: 20%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 30%"></div>
+
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Чёрная вдова</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="free-time-range" style="width: 33%"></div>
+														<div class="meeting" style="width: 5%"></div>
+														<div class="meeting" style="width: 12%"></div>
+														<div class="meeting" style="width: 20%"></div>
+														<div class="free-time-range" style="width: 30%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Чёрная вдова</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="free-time-range" style="width: 33%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 5%"></div>
+													<div class="meeting" style="width: 12%"></div>
+													<div class="meeting" style="width: 20%"></div>
+													<div class="free-time-range" style="width: 30%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+								<div class="floor__room room-row">
+									<div class="room-row__aside">
+										<div class="room-row__title">Белорусский ликёр</div>
+										<div class="room-row__people-count">3—6 человек</div>
+									</div>
+									<div class="room-row__main">
+										<div class="room-row__timegrid_layer_1 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="timegrid__column"></div>
+													<div class="room-row__meeting-back">
+														<div class="meeting" style="width: 33%"></div>
+														<div class="meeting" style="width: 5%"></div>
+														<div class="meeting" style="width: 12%"></div>
+														<div class="free-time-range" style="width: 20%"></div>
+														<div class="meeting" style="width: 30%"></div>
+													</div>
+													<div class="shortcut-item room-row__shortcut-title">Белорусский ликёр</div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+										<div class="room-row__timegrid_layer_2 room-row__timegrid app__timegrid timegrid">
+											<div class="timegrid__offset-left"></div>
+											<div class="room-row__timegrid-body timegrid__body">
+												<div class="room-row__meetings">
+													<div class="meeting" style="width: 33%"></div>
+													<div class="meeting" style="width: 5%"></div>
+													<div class="meeting" style="width: 12%"></div>
+													<div class="free-time-range" style="width: 20%">
+														<div class="free-time-range__add">
+															<span class="free-time-range__plus-icon icon icon_type_plus"></span>
+														</div>
+													</div>
+													<div class="meeting" style="width: 30%"></div>
+												</div>
+											</div>
+											<div class="timegrid__offset-right"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="app__aside app__rooms"></div>
+					<div class="app__timegrid timegrid">
+						<div class="timegrid__offset-left"></div>
+						<div class="timegrid__body">
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+							<div class="timegrid__column"></div>
+						</div>
+						<div class="timegrid__offset-right"></div>
+					</div>
+
+					<div style="display:none;" class="tooltip tooltip_pos_bottom">
+						<button class="tooltip__edit circle-button circle-button_size_md circle-button_theme_normal">
+							<span class="circle-button__icon icon icon_type_edit"></span>
+						</button>
+						<div class="tooltip__title">
+							Рассуждения о высоком
+						</div>
+						<div class="tooltip__info">
+							<span class="tooltip__date">14 декабря</span>
+							<span class="tooltip__time-range">,&nbsp;15:00&mdash;17:00&nbsp;&middot;</span>
+							<span class="tooltip__room">Жёлтый дом</span>
+						</div>
+						<div class="tooltip__people">
+							<div class="person">
+								<div class="person__avatar">
+									<img class="person__avatar-img" src="images/person__avatar-00.jpg">
+								</div>
+								<div class="person__name">
+									Лекс Лютер
+								</div>
+							</div>
+							<div class="tooltip__people-count">&nbsp;и 14 участников</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="tooltip tooltip_pos_bottom">
+			<button class="tooltip__edit circle-button circle-button_size_md circle-button_theme_normal">
+				<span class="circle-button__icon icon icon_type_edit"></span>
+			</button>
+			<div class="tooltip__title">
+				Рассуждения о высоком
+			</div>
+			<div class="tooltip__info">
+				<span class="tooltip__date">14 декабря</span>
+				<span class="tooltip__time-range">,&nbsp;15:00&mdash;17:00&nbsp;&middot;</span>
+				<span class="tooltip__room">Жёлтый дом</span>
+			</div>
+			<div class="tooltip__people">
+				<div class="person">
+					<div class="person__avatar">
+						<img class="person__avatar-img" src="images/person__avatar-00.jpg">
+					</div>
+					<div class="person__name">
+						Лекс Лютер
+					</div>
+				</div>
+				<div class="tooltip__people-count">&nbsp;и 14 участников</div>
+			</div>
+			<style>
+			.tooltip {
+		 		position: absolute;
+		    left: 50%;
+		    top: 320px;
+		 	}
+			 @media (min-width: 1280px) {
+			 	.tooltip {
+			    left: 340px;
+			    top: 290px;
+			 	}
+			 }
+			</style>
+		</div>
+
+
+		
+	
+	
+		<script>
+			var app = document.querySelector('.app');
+			var appAside = document.querySelector('.app__aside');
+			var items = document.querySelectorAll('.shortcut-item');
+			var asideWidth = appAside.offsetWidth;
+			var delta = (asideWidth === 181) ? 41 : 0;
+			function prepearItems() {
+				[].forEach.call(items, function(item) {
+						item.style.opacity = '0';
+				});
+			}
+			function moveItems() {
+				if (app.scrollLeft >= asideWidth) {
+					[].forEach.call(items, function(item) {
+						item.style.left = app.scrollLeft - asideWidth - delta + 'px';
+						item.style.opacity = '1';
+					});
+				} else {
+					[].forEach.call(items, function(item) {
+						item.style.left = '0';
+						item.style.opacity = '0';
+					});
+				}
+			}
+			var isScrolling;
+			app.addEventListener('scroll', function() {
+				prepearItems();
+				clearTimeout(isScrolling);
+				isScrolling = setTimeout(function() {
+					moveItems();
+				}, 66); 
+			});
+
+		</script>
+	</body>
 </html>

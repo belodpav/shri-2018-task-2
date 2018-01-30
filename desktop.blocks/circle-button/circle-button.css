@@ -1,4 +1,7 @@
 @media (min-width: 1280px) {
+  .circle-button {
+    cursor: pointer;
+  }
   .circle-button_size_lg,
   .circle-button_size_md {
   	height: 24px;

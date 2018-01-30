@@ -17,10 +17,12 @@
 }
 .icon_type_arrow-left {
 	background-image: url('icon_type_arrow.svg');
+	background-position: 38% center;
 }
 .icon_type_arrow-right {
 	background-image: url('icon_type_arrow.svg');
 	transform: rotate(180deg);
+	background-position: 38% center;
 }
 .icon_type_arrow-up {
 	background-image: url('icon_type_arrow.svg');

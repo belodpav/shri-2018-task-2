@@ -4,7 +4,7 @@
     background: rgba(0,16,33,0.40);
   }
   .modal__window {
-  	margin: auto;
+  	margin-bottom: auto;
   }
   .modal__br_touch_false {
     display: inline;

@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 var params = {
   out: 'public',
-  htmlSrc: 'change-event_delete.html',
+  htmlSrc: 'main_tooltip.html',
   levels: ['touch.blocks', 'desktop.blocks'] // Уровни переопределения
 },
   getFileNames = require('html2bl').getFileNames(params);
